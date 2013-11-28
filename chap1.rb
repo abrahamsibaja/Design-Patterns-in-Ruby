@@ -6,7 +6,7 @@ if is_car
   my_car.drive(200)
 else
   my_plane = AirPlane.new
-  my_car.fly(200)
+  my_plane.fly(200)
 end
 
 my_vehicle = get_vehicle
