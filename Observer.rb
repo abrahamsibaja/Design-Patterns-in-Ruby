@@ -1,3 +1,8 @@
+class TaxMan
+  def update( changed_employee )
+    puts("Send #{changed_employee.name} a new tax bill!")
+  end
+end
 class Payroll
   def update( changed_employee )
     puts("Cut a new check for #{changed_employee.name}!")
@@ -41,6 +46,9 @@ end
 
 fred = Employee.new("Fred Flintstone", "Crane Operator", 3000)
 payroll = Payroll.new
+tax_man = TaxMan.new
 fred.add_observer( payroll )
+fred.add_observer( tax_man )
+
 fred.salary = 3500 #Giving Fred a raise
 #fred.info
